@@ -19,6 +19,9 @@ StackDS.prototype.top = function(){
         return this.stack[this.stack.length - 1];
     }    
 }
+StackDS.prototype.printStack = function(){
+    console.log(this.stack);
+}
 
 let stack = new StackDS();
 stack.push(5);
@@ -52,3 +55,7 @@ function sort(element){
         stack.push(element);
     }
 }
+
+sort(stack.pop());
+
+stack.printStack();
